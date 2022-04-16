@@ -1,0 +1,111 @@
+<div class="row">
+  <div class="col-12">
+    <ol class="breadcrumb alert-danger">
+      <li class="breadcrumb-item">Home</li>
+      <li class="breadcrumb-item">Products</li>
+    </ol>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-2">
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <input
+            type="email"
+            #search
+            (input)="onSearch(search.value)"
+            class="form-control"
+            placeholder="Search"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h6 class="font-weight-bold mb-3 my-3">Category</h6>
+        <ul class="list-group">
+          <li
+            class="list-group-item text-info category-item border-0 py-1 px-2"
+            *ngFor="let category of categories"
+            (click)="onSelectCategory(category.value)"
+          >
+            {{ category.text }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-10">
+    <div class="row mb-3">
+      <div class="col-12">
+        <div class="d-flex align-items-center">
+          <div>
+            <span>
+              <span class="mr-3">
+                <i
+                  class="fas fa-th mr-2 p-1"
+                  (click)="onModeSelect(cardMode)"
+                  [class.active]="mode === cardMode"
+                ></i>
+                <i
+                  class="fas fa-bars p-1"
+                  (click)="onModeSelect(listMode)"
+                  [class.active]="mode === listMode"
+                ></i>
+              </span>
+              {{ filteredProducts.length }} Products</span
+            >
+          </div>
+          <hr class="flex-grow-1 mx-4" />
+          <div>
+            <span> Sort By</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="mode === cardMode">
+      <div class="col-12">
+        <div class="product-list">
+          <div
+            class="card border-0 mb-4 card-mode"
+            *ngFor="let product of filteredProducts"
+          >
+            <img [src]="product.image" class="card-img-top rounded" />
+            <div class="card-body px-0 d-flex justify-content-between">
+              <span class="text-capitalize"> {{ product.name }}</span>
+              <span class="product-price"> {{ product.price | currency }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" *ngIf="mode === listMode">
+      <div class="col-12">
+        <div
+          class="card mb-5 list-mode border-0"
+          *ngFor="let product of filteredProducts"
+        >
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img [src]="product.image" class="rounded" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title text-capitalize">{{ product.name }}</h5>
+                <p class="product-price">{{ product.price | currency }}</p>
+                <p class="card-text">
+                  {{ product.description }}
+                </p>
+                <p class="card-text">
+                  <button type="button" class="btn btn-success">Details</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

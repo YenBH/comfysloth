@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+/*! `Custom` Bootstrap 5 theme */
+@import url(https://use.fontawesome.com/releases/v5.0.10/css/all.css);
+
+$enable-grid-classes: true;
+$primary:#07689F;
+$secondary:#C9D6DF;
+$success:#11D3BC;
+$danger:#F67280;
+$info:#A2D5F2;
+$warning:#FF7E67;
+$light:#FAFAFA;
+$dark:#4e4e4e;
+$spacer:1rem;
+$border-width:1px;
+$btn-border-radius:.25rem;
+$enable-shadows:true;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1610px,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";

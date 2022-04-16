@@ -1,0 +1,48 @@
+.product-list   {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-mode {
+    flex-basis: 30%;
+
+    img {
+        width: 100%;
+        height: 175px;
+        max-height: 175px;
+        object-fit: cover;
+    }
+}
+
+.list-mode {
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.product-price {
+    color: orangered;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+i {
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.category-item {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1.6px;
+}
