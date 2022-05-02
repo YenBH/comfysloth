@@ -90,10 +90,12 @@
         class="btn btn-info login"
         *ngIf="authService.isLoggedIn(); else loginBtn"
       >
-        Checkout out
+        Checkout
       </button>
       <ng-template #loginBtn>
-        <button class="btn btn-info login" routerLink="/login">Login</button>
+        <button class="btn btn-info login" routerLink="/login">
+          Login to checkout
+        </button>
       </ng-template>
     </article>
   </div>
