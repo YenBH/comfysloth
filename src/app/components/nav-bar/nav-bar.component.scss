@@ -1,0 +1,32 @@
+.cart {
+  .number {
+    position: relative;
+    font-size: 16px;
+    top: -8px;
+    left: 4px;
+    font-weight: bold;
+    color: orangered;
+  }
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.cart-total-price {
+  display: block;
+  font-size: 12px;
+}
+
+.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.nav-items a:hover {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}

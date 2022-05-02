@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "yenbh1-hn21-frf-pad-02": {
+      "hosting": {
+        "mock-project": [
+          "yenbh1-hn21-frf-pad-02"
+        ]
+      }
+    }
+  }
+}

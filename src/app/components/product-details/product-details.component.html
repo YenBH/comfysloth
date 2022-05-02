@@ -1,1 +1,127 @@
-<p>product-details works!</p>
+<div class="row">
+  <div class="col-12">
+    <ol class="breadcrumb alert-danger">
+      <li class="breadcrumb-item">Home</li>
+      <li class="breadcrumb-item">Products</li>
+      <li class="breadcrumb-item text-capitalize">
+        {{ product.name }}
+      </li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <button
+      type="button"
+      routerLink="/products"
+      class="btn btn-sm btn-primary mb-4 my-4"
+    >
+      Back To Products
+    </button>
+  </div>
+</div>
+<div class="row pb-5" *ngIf="product.images">
+  <div class="col-6">
+    <div class="row">
+      <div class="col-12">
+        <img [src]="product.showImage" class="product-images" />
+      </div>
+      <div class="gallery col-12">
+        <img
+          [src]="image.url"
+          *ngFor="let image of product.images"
+          class="product-imag"
+          (click)="product.showImage = image.url"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="text-capitalize text-waring">{{ product.name }}</h3>
+        <div class="star-review">
+          <div class="stars">
+            <span class="stars-item">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+              >
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                >
+                  {{ product.stars }}
+                </path>
+              </svg>
+            </span>
+            <span class="stars-item">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+              >
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                >
+                  {{ product.stars }}
+                </path>
+              </svg>
+            </span>
+            <span class="stars-item">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+              >
+                <path
+                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                >
+                  {{ product.stars }}
+                </path>
+              </svg>
+            </span>
+          </div>
+          <p class="reviews">({{ product.reviews }} customer reviews)</p>
+        </div>
+        <h6 class="price">{{ product.price / 100 | currency }}</h6>
+        <p class="descrip">{{ product.description }}</p>
+        <div class="available">
+          <h6>Available:</h6>
+          <p>In Stock</p>
+        </div>
+        <div class="sku">
+          <h6>SKU:</h6>
+          <p class="text-capitalize">{{ product.id }}</p>
+        </div>
+        <div class="brand">
+          <h6>Brand :</h6>
+          <p class="text-capitalize">{{ product.company }}</p>
+        </div>
+        <hr />
+        <div>
+          <span>Color: </span>
+          <span
+            class="color-item mx-2"
+            *ngFor="let color of product.colors"
+            [style.background-color]="color"
+          ></span>
+        </div>
+        <div class="mt-3">
+          <button class="btn btn-primary" (click)="onAddToCartClick()">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

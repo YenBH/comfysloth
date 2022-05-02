@@ -1,31 +1,21 @@
-<nav>
+<nav class="bg-white border-bottom shadow-sm">
   <div
-    class="container-xl d-flex flex-md-row align-items-center bg-white border-bottom shadow-sm justify-content-between"
+    class="container-xl d-flex flex-md-row align-items-center justify-content-between"
   >
-    <a
-      class="navbar-brand my-0 font-weight-normal"
-      routerLinkActive="active"
-      routerLink="/"
-    >
+    <a class="navbar-brand my-0 font-weight-normal" routerLink="/">
       <img
         src="https://react-course-comfy-sloth-store.netlify.app/static/media/logo.221f6b13.svg"
         alt="comfy-sloth"
+        width="175px"
       />
     </a>
 
-    <span>
+    <span class="nav-items">
       <a
         class="p-4 text-primary font-weight-bold"
-        routerLink="/"
+        routerLink="/home"
         routerLinkActive="active"
         >Home</a
-      >
-
-      <a
-        class="p-4 text-primary font-weight-bold"
-        routerLink="/about"
-        routerLinkActive="active"
-        >About</a
       >
 
       <a
@@ -33,19 +23,60 @@
         routerLink="/products"
         routerLinkActive="active"
         >Products</a
+      >
+
+      <a
+        class="p-4 text-primary font-weight-bold"
+        routerLink="/about"
+        routerLinkActive="active"
+        >About</a
       ></span
     >
 
-    <span>
-      <a class="p-4 text-info" routerLink="/cart" routerLinkActive="active"
-        >Cart</a
+    <div class="my-2 d-flex align-items-center">
+      <span
+        class="text-dark cart mr-3 cursor-pointer text-center"
+        routerLink="/cart"
+        *ngIf="authService.isLoggedIn()"
       >
-      <a
-        class="btn btn-outline-info"
+        <i class="fas fa-shopping-cart"></i>
+        <span class="number">{{ cartService.getCart().length }}</span>
+        <span class="cart-total-price">{{
+          cartService.getTotalPrice() / 100 | currency: "USD"
+        }}</span>
+      </span>
+
+      <span
         routerLink="/login"
-        routerLinkActive="active"
+        class="text-dark ml-3 cursor-pointer"
+        *ngIf="!authService.isLoggedIn()"
       >
-        Login <i class="fas fa-user"></i> </a
-    ></span>
+        <i class="fas fa-sign-in-alt"></i>
+        Login
+      </span>
+
+      <span
+        routerLink="/sign-up"
+        class="text-dark ml-3 cursor-pointer"
+        *ngIf="!authService.isLoggedIn()"
+      >
+        <i class="fas fa-user-plus"></i>
+        Sign-up
+      </span>
+
+      <span
+        (click)="logout()"
+        class="mx-3 cursor-pointer"
+        *ngIf="authService.isLoggedIn()"
+      >
+        <i class="fas fa-sign-out-alt"></i>
+        Logout
+      </span>
+      <span
+        class="text-white p-1 border border-white rounded-circle text-uppercase user-name text-center text-warning"
+        *ngIf="authService.isLoggedIn()"
+        ><img [src]="authService.user?.avatar" class="user-avatar" alt=""
+      /></span>
+    </div>
   </div>
 </nav>

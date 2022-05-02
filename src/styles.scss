@@ -2,25 +2,33 @@
 @import url(https://use.fontawesome.com/releases/v5.0.10/css/all.css);
 
 $enable-grid-classes: true;
-$primary:#07689F;
-$secondary:#C9D6DF;
-$success:#11D3BC;
-$danger:#F67280;
-$info:#A2D5F2;
-$warning:#FF7E67;
-$light:#FAFAFA;
-$dark:#4e4e4e;
-$spacer:1rem;
-$border-width:1px;
-$btn-border-radius:.25rem;
-$enable-shadows:true;
+$primary: #07689f;
+$secondary: #c9d6df;
+$success: #11d3bc;
+$danger: #f67280;
+$info: #a2d5f2;
+$warning: #ff7e67;
+$light: #fafafa;
+$dark: #4e4e4e;
+$spacer: 1rem;
+$border-width: 1px;
+$btn-border-radius: 0.25rem;
+$enable-shadows: true;
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1610px,
+  xl: 1440px,
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+body {
+  line-height: 1.8;
+}

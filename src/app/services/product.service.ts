@@ -23,4 +23,10 @@ export class ProductService {
   getProducts() {
     return this.http.get(this.baseURL);
   }
+
+  getProductDetails(id) {
+    return this.http.get(
+      "https://course-api.com/react-store-single-product?id=" + id
+    );
+  }
 }

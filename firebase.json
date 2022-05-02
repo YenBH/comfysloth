@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "mock-project",
+      "public": "dist/mock-project",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

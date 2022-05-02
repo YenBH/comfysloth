@@ -1,0 +1,149 @@
+.img-comfy-sloth-store {
+  height: 550px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.img-container {
+  content: "";
+  position: absolute;
+  width: 2.8%;
+  height: 80%;
+  background: #decbc0;
+  bottom: 0%;
+  left: 61.8%;
+  border-radius: 5px 0px;
+}
+.accent-img {
+  position: absolute;
+  bottom: 0px;
+  right: 15.6%;
+  width: 250px;
+  transform: translateX(-50%);
+  border-radius: 0.25rem;
+}
+
+h {
+  font-weight: bold;
+}
+
+p {
+  line-height: 2;
+  max-width: 45em;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 6.5%;
+}
+.card-img {
+  width: 100%;
+  height: 175px;
+  max-height: 175px;
+  object-fit: cover;
+}
+.featured-products {
+  background: #f1f5f8;
+  padding: 5rem;
+  display: block;
+  margin: 0 -48px;
+}
+
+// .containers-image {
+//     background: #f1f5f8;
+//     padding:5rem;
+//     display: block;
+// }
+
+.text-card {
+  display: block;
+  width: 148px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.featured {
+  text-transform: capitalize;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.card-body {
+  background: #f1f5f8;
+}
+
+.header {
+  background-color: #eaded7;
+  padding-top: 5%;
+  padding-left: 2%;
+  display: grid;
+  grid-template-columns: 1.3fr 1.2fr;
+}
+.header h3 {
+  line-height: 1;
+  color: #453227;
+}
+.header p {
+  color: #795744;
+}
+
+.service {
+  background: #c5a491;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 0.25rem;
+  position: relative;
+  top: 25%;
+}
+
+.custom {
+  background-color: #eaded7;
+  margin: 0 -48px;
+}
+span.icon {
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  margin: 0px auto 1rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #eaded7;
+  color: #453227;
+  font-size: 1.7rem;
+}
+
+.services-center {
+  margin-top: 4rem;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 3.5rem;
+}
+
+.section-center h3 {
+  color: #102a42;
+  font-weight: bold;
+}
+
+.section-center p {
+  color: #617d98;
+  display: grid;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  padding-left: 2%;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.Lorem {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
