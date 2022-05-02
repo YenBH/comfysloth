@@ -21,8 +21,6 @@ export class ProductDetailsComponent implements OnInit {
     let id = this.route.snapshot.params.id;
     this.productService.getProductDetails(id).subscribe((data: any) => {
       data.showImage = data.images[0].url;
-      console.log(data);
-
       this.product = data;
     });
   }
