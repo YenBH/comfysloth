@@ -102,12 +102,12 @@
                 <i
                   class="fas fa-th mr-2 p-1"
                   (click)="onModeSelect(modes.Card)"
-                  [class.active]="currentMode === modes.Card"
+                  [class.active]="currentMode == modes.Card"
                 ></i>
                 <i
                   class="fas fa-bars p-1"
                   (click)="onModeSelect(modes.List)"
-                  [class.active]="currentMode === modes.List"
+                  [class.active]="currentMode == modes.List"
                 ></i>
               </span>
               {{ filteredProducts.length }} Products</span
@@ -126,7 +126,7 @@
         </div>
       </div>
     </div>
-    <div class="row" *ngIf="currentMode === modes.Card">
+    <div class="row" *ngIf="currentMode == modes.Card">
       <div class="col-12">
         <div class="product-list">
           <div
@@ -155,10 +155,10 @@
         </div>
       </div>
     </div>
-    <div class="row" *ngIf="currentMode === modes.List">
+    <div class="row" *ngIf="currentMode == modes.List">
       <div class="col-12">
         <div
-          class="card mb-3 mr-5 list-mode border-0"
+          class="card mb-5 mr-5 list-mode border-0"
           *ngFor="let product of filteredProducts"
         >
           <div class="row no-gutters">
@@ -166,7 +166,7 @@
               <img [src]="product.image" class="rounded cursor-pointer" />
             </div>
             <div class="col-md-8">
-              <div class="card-body">
+              <div class="card-body pt-0">
                 <h5 class="card-title text-capitalize">{{ product.name }}</h5>
                 <p class="product-price">
                   {{ product.price / 100 | currency }}
@@ -177,7 +177,7 @@
                 <p class="card-text">
                   <button
                     type="button"
-                    routerLink="/products/:id"
+                    [routerLink]="['/products', product.id]"
                     class="btn btn-sm btn-info"
                   >
                     Details

@@ -18,7 +18,9 @@ export class ProductsComponent implements OnInit {
   modes = Modes;
   maxPrice = 100;
   price = "0";
-  currentMode = Modes.Card;
+  currentMode = localStorage.getItem("currentMode")
+    ? localStorage.getItem("currentMode")
+    : Modes.Card;
 
   products: any[] = [];
 
@@ -177,5 +179,6 @@ export class ProductsComponent implements OnInit {
 
   onModeSelect(value) {
     this.currentMode = value;
+    localStorage.setItem("currentMode", value);
   }
 }
