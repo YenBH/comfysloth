@@ -19,13 +19,4 @@ export class NavBarComponent implements OnInit {
   logout() {
     this.authService.logout();
   }
-
-  getUserName() {
-    return this.authService.user
-      ? this.authService.user.username
-          .split(" ")
-          .map((item) => item.charAt(0))
-          .join("")
-      : "";
-  }
 }

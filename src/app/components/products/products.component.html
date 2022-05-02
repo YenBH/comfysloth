@@ -148,9 +148,32 @@
             <button
               class="btn btn-primary"
               (click)="cartService.addToCart(product)"
+              *ngIf="
+                cartService.getItemQuantity(product) == 0;
+                else updateItemQuantity
+              "
             >
               <i class="fas fa-cart-plus"></i> Add to cart
             </button>
+            <ng-template #updateItemQuantity>
+              <div class="d-flex justify-content-between">
+                <button
+                  class="btn btn-danger"
+                  (click)="cartService.removeItem(product)"
+                >
+                  <i class="fas fa-minus-circle text-white"></i>
+                </button>
+                <span class="font-weight-bold">{{
+                  cartService.getItemQuantity(product)
+                }}</span>
+                <button
+                  class="btn btn-success"
+                  (click)="cartService.addToCart(product)"
+                >
+                  <i class="fas fa-plus-circle text-white"></i>
+                </button>
+              </div>
+            </ng-template>
           </div>
         </div>
       </div>

@@ -37,10 +37,9 @@
       <span
         class="text-dark cart mr-3 cursor-pointer text-center"
         routerLink="/cart"
-        *ngIf="authService.isLoggedIn()"
       >
         <i class="fas fa-shopping-cart"></i>
-        <span class="number">{{ cartService.getCart().length }}</span>
+        <span class="number">{{ cartService.getCartQuantity() }}</span>
         <span class="cart-total-price">{{
           cartService.getTotalPrice() / 100 | currency: "USD"
         }}</span>

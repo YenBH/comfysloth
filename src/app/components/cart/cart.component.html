@@ -35,7 +35,15 @@
           </div>
         </td>
         <td class="text-center">{{ item.price / 100 | currency: "USD" }}</td>
-        <td class="text-center">1</td>
+        <td class="text-center">
+          <button class="btn btn-danger" (click)="cartService.removeItem(item)">
+            <i class="fas fa-minus-circle text-white"></i>
+          </button>
+          <span class="mx-4">{{ cartService.getItemQuantity(item) }}</span>
+          <button class="btn btn-success" (click)="cartService.addToCart(item)">
+            <i class="fas fa-plus-circle text-white"></i>
+          </button>
+        </td>
         <td class="text-center">
           <button class="remove-btn" (click)="cartService.removeItem(item)">
             <svg
