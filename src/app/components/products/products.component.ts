@@ -107,18 +107,18 @@ export class ProductsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.productService.getProducts().subscribe((res: any) => {
-    this.products = data;
-    this.filteredProducts = [...this.products];
+    this.productService.getProducts().subscribe((data: any) => {
+      this.products = data;
+      this.filteredProducts = [...this.products];
 
-    let max = this.products[0].price;
+      let max = this.products[0].price;
 
-    for (let i = 1; i < this.products.length; i++) {
-      if (this.products[i].price > max) max = this.products[i].price;
-    }
-    this.maxPrice = max;
-    this.price = max;
-    // });
+      for (let i = 1; i < this.products.length; i++) {
+        if (this.products[i].price > max) max = this.products[i].price;
+      }
+      this.maxPrice = max;
+      this.price = max;
+    });
   }
 
   onSelectCategory(cat: string) {
