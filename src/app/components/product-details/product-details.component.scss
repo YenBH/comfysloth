@@ -43,27 +43,21 @@
 .descrip {
   color: #324d67;
 }
-.available {
-  display: grid;
-  grid-template-columns: 125px 1fr;
-  color: #324d67;
-}
-.sku {
-  display: grid;
-  grid-template-columns: 125px 1fr;
-  color: #324d67;
-}
+.available,
+.sku,
 .brand {
   display: grid;
   grid-template-columns: 125px 1fr;
   color: #324d67;
+  align-items: center;
 }
-.color {
-  display: grid;
-  box-sizing: border-box;
-  line-height: 1.5;
-  color: #324d67;
-}
+
+// .color {
+//   display: grid;
+//   box-sizing: border-box;
+//   line-height: 1.5;
+//   color: #324d67;
+// }
 
 .color-item {
   display: inline-block;
