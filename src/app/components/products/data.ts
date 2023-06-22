@@ -3,8 +3,7 @@ export default [
     id: "recZkNf2kwmdBcqd0",
     name: "accent chair",
     price: 25999,
-    image:
-      "https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160?ts=1650132115&userId=usrQMwWEPx18KgLcP&cs=ba7555761a00e1e6",
+    image: "https://www.course-api.com/images/store/product-1.jpeg",
     colors: ["#ff0000", "#00ff00", "#0000ff"],
     company: "marcos",
     description:

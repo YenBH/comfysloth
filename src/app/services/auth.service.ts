@@ -13,8 +13,8 @@ export class AuthService {
     return new Promise((resolve, reject) => {
       this.http.post(this.url, user).subscribe((res: any) => {
         this.user = res = {
-          email: "eve.holt@reqres.in",
-          username: "city slicka",
+          email: "janet.weaver@reqres.in",
+          username: "janet",
           avatar: "https://reqres.in/img/faces/2-image.jpg",
           token:
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyNDAzQGZha2VtYWlsLmNvbSIsInVzZXJuYW1lIjoidGVzdDI0MDNAZmFrZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkVVF5bk1ZVS50THl1VEJ6WDNrMXhuT2hDYUE0Lk5IVXdDc0JUVmliV1hicTk2Z1RSVUs3cWkiLCJiaW8iOm51bGwsImltYWdlIjoiaHR0cHM6Ly9hcGkucmVhbHdvcmxkLmlvL2ltYWdlcy9zbWlsZXktY3lydXMuanBlZyIsImlhdCI6MTY0NzI2NzY5MywiZXhwIjoxNjUyNDUxNjkzfQ.5N9FteVyXPv3roEhzzk9JSNTp5FhUxPZOUl2EBXQc5A",
@@ -29,8 +29,8 @@ export class AuthService {
     return new Promise((resolve, reject) => {
       this.http.post(this.url, user).subscribe((res) => {
         this.user = res = {
-          email: "eve.holt@reqres.in",
-          username: "city slicka",
+          email: "janet.weaver@reqres.in",
+          username: "janet",
           avatar: "https://reqres.in/img/faces/2-image.jpg",
           token:
             "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QyNDAzQGZha2VtYWlsLmNvbSIsInVzZXJuYW1lIjoidGVzdDI0MDNAZmFrZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkVVF5bk1ZVS50THl1VEJ6WDNrMXhuT2hDYUE0Lk5IVXdDc0JUVmliV1hicTk2Z1RSVUs3cWkiLCJiaW8iOm51bGwsImltYWdlIjoiaHR0cHM6Ly9hcGkucmVhbHdvcmxkLmlvL2ltYWdlcy9zbWlsZXktY3lydXMuanBlZyIsImlhdCI6MTY0NzI2NzY5MywiZXhwIjoxNjUyNDUxNjkzfQ.5N9FteVyXPv3roEhzzk9JSNTp5FhUxPZOUl2EBXQc5A",

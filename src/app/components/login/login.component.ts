@@ -10,8 +10,8 @@ import { Component, OnInit } from "@angular/core";
 export class LoginComponent implements OnInit {
   isInvalid = false;
   user = {
-    email: "eve.holt@reqres.in",
-    password: "cityslicka",
+    email: "janet.weaver@reqres.in",
+    password: "janet",
   };
 
   constructor(public authService: AuthService, private router: Router) {}

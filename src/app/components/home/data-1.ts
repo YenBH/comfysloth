@@ -3,8 +3,7 @@ export default [
     id: "rec7JInsuCEHgmaGe",
     name: "utopia sofa",
     price: 79999,
-    image:
-      "https://dl.airtable.com/.attachmentThumbnails/5ebc46a9e31a09cbc6078190ab035abc/8480b064?ts=1650377990&userId=usrQMwWEPx18KgLcP&cs=ea2885fed33275f8",
+    image: "https://www.course-api.com/images/store/product-17.jpeg",
     eatured: true,
     colors: ["#ff0000", "#00ff00"],
     company: "liddy",
@@ -16,8 +15,7 @@ export default [
     id: "recd1jIVIEChmiwhe",
     name: "armchair",
     price: 12599,
-    image:
-      "https://dl.airtable.com/.attachmentThumbnails/530c07c5ade5acd9934c8dd334458b86/cf91397f?ts=1650403304&userId=usrQMwWEPx18KgLcP&cs=902d2be9af8864c9",
+    image: "https://www.course-api.com/images/store/product-4.jpeg",
     colors: ["#000", "#00ff00", "#0000ff"],
     company: "marcos",
     description:
@@ -29,8 +27,7 @@ export default [
     id: "recoAJYUCuEKxcPSr",
     name: "modern bookshelf",
     price: 31999,
-    image:
-      "https://dl.airtable.com/.attachmentThumbnails/1e4a818f5184993e430420a152315b40/873c7094?ts=1650403304&userId=usrQMwWEPx18KgLcP&cs=c9ebdd7345e492c5",
+    image: "https://www.course-api.com/images/store/product-11.jpeg",
     featured: true,
     colors: ["#ffb900", "#ff0000", "#00ff00"],
     company: "caressa",
